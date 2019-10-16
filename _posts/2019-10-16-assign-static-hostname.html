@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Assign a Static Hostname to Amazon EC2 instance running RHEL 7"
+date:   2019-10-16 10:55:40 +0530
+categories: AWS
+---
+
+<p>Once I faced an issue with changing RHEL 7 hostname running on AWS EC2 Instance. If I reboot or stop/start the instance, it will revert to using a hostname derived from the IP address assigned to the instance. In this post, you will find the solution to fix this issue if you encountered with one.</p>
+<p>So basically, the Linux <b>hostname</b> command can be used by administrators to change the hostname of a Linux instance. If you want the new hostname to persist between instance stops/starts and reboots, you must add the new hostname to <b>/etc/hostname</b> configuration file on your Linux instance.</p>
+
+<h3>Solution:</h3>
+<h4>Step 1:</h4>
+<p>As said earlier, update the <b>/etc/hostname</b> file on your RHEL 7 or Centos 7 Linux instance with the new hostname. Assuming, you are logged in as root user, if you are logged in as sudo privileged user then use sudo as a prefix to the below command.</p>
+
+<p><div style="background-color:black;color:white;padding:10px;">
+    # vim /etc/hostname
+</div></p>
+
+<p>Replace the existing text with the hostname that you want the instance to use even after a restart or reboot.</p>
+<p>Save and exit the vim editor.</p>
+
+<h4>Step 2:</h4>
+<p>Now update the <b>/etc/sysconfig/network</b> configuration file with the following values:</p>
+<p><div style="background-color:black;color:white;padding:10px;">
+    NETWORKING=yes <br>
+    NETWORKING_IPV6=no <br>
+    HOSTNAME=YOUR HOSTNAME <br>
+</div></p>
+<p>Save and exit the vim editor.</p>
+
+<h4>Step 3:</h4>
+<p>Finally, the third and the most important one. Update the <b>/etc/cloud/cloud.cfg</b> file. Append the following string at the bottom of the file to ensure that the hostname is preserved between restarts/reboots.</p>
+
+<p><div style="background-color:black;color:white;padding:10px;">
+    preserve_hostname: true
+</div></p>
+
+<p>Search for the below words and comment the two lines as this is the culprit responsible for reverting the hostname every time the instance is rebooted.</p>
+
+<p><div style="background-color:black;color:white;padding:10px;">
+    # - set_hostname <br>
+    # - update_hostname
+</div></p>
+
+<p>Save and exit the vim editor.</p>
+<p>That's it, Now you can reboot your instance and check the hostname by running the below command without any arguments and it will show your server hostname.</p>
+<p><div style="background-color:black;color:white;padding:10px;">
+    # hostname <br>
+    blog.vipinkumar.me
+</div></p>

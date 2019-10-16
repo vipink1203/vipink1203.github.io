@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-16T19:26:30+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">VIPIN KUMAR</title><subtitle>Just a personal site.</subtitle><author><name>Vipin Kumar</name></author><entry><title type="html">List The Current PHP Handler - cPanel</title><link href="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html" rel="alternate" type="text/html" title="List The Current PHP Handler - cPanel" /><published>2019-10-16T10:55:40+05:30</published><updated>2019-10-16T10:55:40+05:30</updated><id>http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel</id><content type="html" xml:base="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html">&lt;p&gt;A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp; FastCGI.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-16T20:43:52+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">VIPIN KUMAR</title><subtitle>Just a personal site.</subtitle><author><name>Vipin Kumar</name></author><entry><title type="html">Assign a Static Hostname to Amazon EC2 instance running RHEL 7</title><link href="http://localhost:4000/aws/2019/10/16/assign-static-hostname.html" rel="alternate" type="text/html" title="Assign a Static Hostname to Amazon EC2 instance running RHEL 7" /><published>2019-10-16T10:55:40+05:30</published><updated>2019-10-16T10:55:40+05:30</updated><id>http://localhost:4000/aws/2019/10/16/assign-static-hostname</id><content type="html" xml:base="http://localhost:4000/aws/2019/10/16/assign-static-hostname.html">&lt;p&gt;Once I faced an issue with changing RHEL 7 hostname running on AWS EC2 Instance. If I reboot or stop/start the instance, it will revert to using a hostname derived from the IP address assigned to the instance. In this post, you will find the solution to fix this issue if you encountered with one.&lt;/p&gt;
+&lt;p&gt;So basically, the Linux &lt;b&gt;hostname&lt;/b&gt; command can be used by administrators to change the hostname of a Linux instance. If you want the new hostname to persist between instance stops/starts and reboots, you must add the new hostname to &lt;b&gt;/etc/hostname&lt;/b&gt; configuration file on your Linux instance.&lt;/p&gt;
+
+&lt;h3&gt;Solution:&lt;/h3&gt;
+&lt;h4&gt;Step 1:&lt;/h4&gt;
+&lt;p&gt;As said earlier, update the &lt;b&gt;/etc/hostname&lt;/b&gt; file on your RHEL 7 or Centos 7 Linux instance with the new hostname. Assuming, you are logged in as root user, if you are logged in as sudo privileged user then use sudo as a prefix to the below command.&lt;/p&gt;
+
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    # vim /etc/hostname
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Replace the existing text with the hostname that you want the instance to use even after a restart or reboot.&lt;/p&gt;
+&lt;p&gt;Save and exit the vim editor.&lt;/p&gt;
+
+&lt;h4&gt;Step 2:&lt;/h4&gt;
+&lt;p&gt;Now update the &lt;b&gt;/etc/sysconfig/network&lt;/b&gt; configuration file with the following values:&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    NETWORKING=yes &lt;br&gt;
+    NETWORKING_IPV6=no &lt;br&gt;
+    HOSTNAME=YOUR HOSTNAME &lt;br&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Save and exit the vim editor.&lt;/p&gt;
+
+&lt;h4&gt;Step 3:&lt;/h4&gt;
+&lt;p&gt;Finally, the third and the most important one. Update the &lt;b&gt;/etc/cloud/cloud.cfg&lt;/b&gt; file. Append the following string at the bottom of the file to ensure that the hostname is preserved between restarts/reboots.&lt;/p&gt;
+
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    preserve_hostname: true
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Search for the below words and comment the two lines as this is the culprit responsible for reverting the hostname every time the instance is rebooted.&lt;/p&gt;
+
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    # - set_hostname &lt;br&gt;
+    # - update_hostname
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Save and exit the vim editor.&lt;/p&gt;
+&lt;p&gt;That's it, Now you can reboot your instance and check the hostname by running the below command without any arguments and it will show your server hostname.&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    # hostname &lt;br&gt;
+    blog.vipinkumar.me
+&lt;/div&gt;&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">Once I faced an issue with changing RHEL 7 hostname running on AWS EC2 Instance. If I reboot or stop/start the instance, it will revert to using a hostname derived from the IP address assigned to the instance. In this post, you will find the solution to fix this issue if you encountered with one. So basically, the Linux hostname command can be used by administrators to change the hostname of a Linux instance. If you want the new hostname to persist between instance stops/starts and reboots, you must add the new hostname to /etc/hostname configuration file on your Linux instance.</summary></entry><entry><title type="html">List The Current PHP Handler - cPanel</title><link href="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html" rel="alternate" type="text/html" title="List The Current PHP Handler - cPanel" /><published>2019-10-16T10:55:40+05:30</published><updated>2019-10-16T10:55:40+05:30</updated><id>http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel</id><content type="html" xml:base="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html">&lt;p&gt;A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp; FastCGI.&lt;/p&gt;
 &lt;p&gt;In this tutorial, we will see how to list the current working PHP handler using command line.&lt;/p&gt;
 &lt;p&gt;First ssh into the server as the root user. Then run the command below,&lt;/p&gt;
 
@@ -45,11 +87,11 @@
 
 &lt;p&gt;As shown in the figure below, go to plugins and click on the Settings link.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/pluginssettings.png&quot; alt=&quot;Add new plugin&quot; style=&quot;width:800px;height:100px;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/pluginssettings.png&quot; alt=&quot;plugin settings&quot; style=&quot;width:800px;height:100px;&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, you will see a settings page like below where you have to enter your SMTP details. I'll walk you through each one.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/smtppage.png&quot; alt=&quot;Add new plugin&quot; style=&quot;width:400px;height:400px;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/smtppage.png&quot; alt=&quot;smtp details&quot; style=&quot;width:400px;height:400px;&quot;&gt;&lt;/p&gt;
 
 &lt;ol&gt;
     &lt;li&gt;&quot;From Email Address&quot;: Enter the email address from which the website send mail.&lt;/li&gt;
