@@ -8,10 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    VIPIN KUMAR
+    Configure SMTP To Send Mails From A WordPress Website - VIPIN KUMAR
+    
   </title>
 
-  <meta name="description" content="Just a personal site.">
+  <meta name="description" content="Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that, you would have to configure SMTP authentication for your website....">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +23,7 @@
 
   <link rel="stylesheet" href="/assets/main.css">
   
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="canonical" href="http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp.html">
   <link rel="alternate" type="application/rss+xml" title="VIPIN KUMAR" href="/feed.xml">
 
 </head>
@@ -60,17 +61,22 @@
 
   <!-- Page Header -->
 
-<header class="masthead" style="background-image: url('/img/bg-index.jpg')">
+<header class="masthead" style="background-image: url('/img/posts/Gmail-WordPress.jpg')">
   
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>VIPIN KUMAR</h1>
+          <div class="post-heading">
+            <h1>Configure SMTP To Send Mails From A WordPress Website</h1>
             
-            <span class="subheading">Just a personal site.</span>
-            
+            <span class="meta">Posted by
+              <a href="#">Vipin Kumar</a>
+              on October 16, 2019 &middot; <span class="reading-time" title="Estimated read time">
+  
+   3 mins  read </span>
+
+            </span>
           </div>
         </div>
       </div>
@@ -81,83 +87,66 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        
+        <p>Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that, you would have to configure SMTP authentication for your website. Assuming you are using WordPress, there are many plugins available to complete this task.</p>
 
-        <!-- Home Post List -->
-        
+<p>Using the plugin and configuring sometimes won't help you to receive emails and would throw back errors related to authentication or connection timeout. So, I have posted the complete solution below from which you could successfully configure SMTP for your website.</p>
 
-        <article class="post-preview">
-          <a href="/cpanel/2019/10/16/list-php-handler-cpanel.html">
-            <h2 class="post-title">List The Current PHP Handler - cPanel</h2>
-            
-            <h3 class="post-subtitle">A PHP handler is a type of Apache module that contains libraries that the Apache...</h3>
-            
-          </a>
-          <p class="post-meta">Posted by
-            
-            Vipin Kumar
-            
-            on
-            October 16, 2019 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-            
-          </p>
-        </article>
+<h3>Solution:</h3>
 
-        <hr>
+<h4>Step 1:</h4>
 
-        
+<p>Login to your WordPress wp-admin control panel. Click on Plugins and then add-new button as shown in the below figure.</p>
 
-        <article class="post-preview">
-          <a href="/scripting/2019/10/16/download-youtube-videos.html">
-            <h2 class="post-title">Download Videos From YouTube</h2>
-            
-            <h3 class="post-subtitle">I was searching for an easy way to download YouTube videos from the Linux command...</h3>
-            
-          </a>
-          <p class="post-meta">Posted by
-            
-            Vipin Kumar
-            
-            on
-            October 16, 2019 &middot; <span class="reading-time" title="Estimated read time">
-  
-   2 mins  read </span>
-            
-          </p>
-        </article>
+<p><img src="/img/posts/plugins-addnew.png" alt="Add new plugin" style="width:600px;height:200px;"></p>
 
-        <hr>
+<h4>Step 2:</h4>
 
-        
+<p>Search for the SMTP keyword. For demo purpose, I searched for wp SMTP and installed a plugin called "Easy WP SMTP" . While installing plugins make sure the plugin is updated regularly by its author and it has good reviews. </p>
+<p>Click on the Install button and then Activate button to enable the plugin.</p>
 
-        <article class="post-preview">
-          <a href="/wordpress/2019/10/16/configure-smtp-wp.html">
-            <h2 class="post-title">Configure SMTP To Send Mails From A WordPress Website</h2>
-            
-            <h3 class="post-subtitle">Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that,...</h3>
-            
-          </a>
-          <p class="post-meta">Posted by
-            
-            Vipin Kumar
-            
-            on
-            October 16, 2019 &middot; <span class="reading-time" title="Estimated read time">
-  
-   3 mins  read </span>
-            
-          </p>
-        </article>
+<h4>Step 3:</h4>
+
+<p>As shown in the figure below, go to plugins and click on the Settings link.</p>
+
+<p><img src="/img/posts/pluginssettings.png" alt="Add new plugin" style="width:800px;height:100px;"></p>
+
+<p>Next, you will see a settings page like below where you have to enter your SMTP details. I'll walk you through each one.</p>
+
+<p><img src="/img/posts/smtppage.png" alt="Add new plugin" style="width:400px;height:400px;"></p>
+
+<ol>
+    <li>"From Email Address": Enter the email address from which the website send mail.</li>
+    <li>"From Name": Give a name you wish that should be shown when others receive emails from your website.</li>
+    <li>"SMTP Host": This is the SMTP server name that you use. For example, if you are using Gmail mail service, then your SMTP host will be "smtp.gmail.com"</li>
+    <li>"Type of Encryption": Select the TLS radio button.</li>
+    <li>"SMTP Port": If you select TLS encryption, then the port will be 587 and if you choose SSL then the port will be 465.</li>
+    <li>"SMTP AUTHENTICATION": Select "yes" radio button,</li>
+    <li>"SMTP Username": This would be the email id that you use to login to your mail account.</li>
+    <li>"SMTP Password": Enter your mail account password here.</li>  
+</ol> 
+
+<p>Now save all the changes by clicking the "Save Changes" button.</p>
+<p>It's time to check if your details are correct and you are able to send mail via your SMTP details.</p>
+<p>Under the Testing and debugging settings area, enter the details and click on send mail. You would probably encounter with some error like the below</p>
+
+<font color="red">SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting or Some Authentication Issue</font>
+
+
+<p>To avoid that, open your Gmail account and click or copy-paste this <a href="https://www.google.com/settings/security/lesssecureapps">link</a> on another tab of your browser.</p>
+<p>Select "Turn on" radio button to allow access and again try to send mail via testing and debugging settings. You would be able to send mail.</p>
+<p>There are other methods without enabling access to less secure apps and I will post that in future articles.</p>
+
 
         <hr>
 
-        
-
-        <!-- Pager -->
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="/posts">View All Posts &rarr;</a>
+
+          
+          
+          <a class="btn btn-primary float-right" href="/scripting/2019/10/16/download-youtube-videos.html" data-toggle="tooltip" data-placement="top" title="Download Videos From YouTube">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
         </div>
 
       </div>

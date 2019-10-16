@@ -1,93 +1,146 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-16T17:58:21+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">VIPIN KUMAR</title><subtitle>Just a personal site.</subtitle><author><name>Vipin Kumar</name></author><entry><title type="html">List The Current PHP Handler - cPanel</title><link href="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html" rel="alternate" type="text/html" title="List The Current PHP Handler - cPanel" /><published>2019-10-16T10:55:40+05:30</published><updated>2019-10-16T10:55:40+05:30</updated><id>http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel</id><content type="html" xml:base="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html">A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp; FastCGI.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-16T19:26:30+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">VIPIN KUMAR</title><subtitle>Just a personal site.</subtitle><author><name>Vipin Kumar</name></author><entry><title type="html">List The Current PHP Handler - cPanel</title><link href="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html" rel="alternate" type="text/html" title="List The Current PHP Handler - cPanel" /><published>2019-10-16T10:55:40+05:30</published><updated>2019-10-16T10:55:40+05:30</updated><id>http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel</id><content type="html" xml:base="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html">&lt;p&gt;A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp; FastCGI.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will see how to list the current working PHP handler using command line.&lt;/p&gt;
+&lt;p&gt;First ssh into the server as the root user. Then run the command below,&lt;/p&gt;
 
-In this tutorial, we will see how to list the current working PHP handler using command line.
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    root@home[~]# /usr/local/cpanel/bin/rebuild_phpconf --current &lt;br&gt;
+    Available handlers: suphp dso cgi none &lt;br&gt;
+    DEFAULT PHP: 5 &lt;br&gt;
+    PHP4 SAPI: none &lt;br&gt;
+    PHP5 SAPI: suphp &lt;br&gt;
+    SUEXEC: enabled &lt;br&gt;
+    RUID2: not installed &lt;br&gt;
+&lt;/div&gt;&lt;/p&gt;
 
-First ssh into the server as the root user. Then run the command below,
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpanel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rebuild_phpconf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;We can also list the available PHP handlers using the same command,&lt;/p&gt;
 
-### Example:
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# /usr/local/cpanel/bin/rebuild_phpconf --current&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;Available&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;handlers: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;suphp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dso&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cgi&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;DEFAULT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;PHP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;PHP4&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SAPI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;PHP5&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SAPI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;suphp&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;SUEXEC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enabled&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;RUID2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;installed&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    root@home [~]# /usr/local/cpanel/bin/rebuild_phpconf --available &lt;br&gt;
+    Available handlers: suphp dso cgi none &lt;br&gt;
+    PHP4 SAPI: not installed &lt;br&gt;
+    PHP5 SAPI: cgi-fcgi &lt;br&gt;
+    SUEXEC: available &lt;br&gt;
+    RUID2: not available &lt;br&gt;
+&lt;/div&gt;&lt;/p&gt;
 
-We can also list the available PHP handlers using the same command,
+&lt;p&gt;In the next tutorial, we will see how to change the PHP handler in cpanel server and will use a script to fix permissions for all the user accounts.&lt;/p&gt;
+&lt;p&gt;Once this script is executed after changing the PHP handler you will never run into WordPress plugin or theme installation errors.&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp; FastCGI. In this tutorial, we will see how to list the current working PHP handler using command line. First ssh into the server as the root user. Then run the command below,</summary></entry><entry><title type="html">Configure SMTP To Send Mails From A WordPress Website</title><link href="http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp.html" rel="alternate" type="text/html" title="Configure SMTP To Send Mails From A WordPress Website" /><published>2019-10-16T09:15:40+05:30</published><updated>2019-10-16T09:15:40+05:30</updated><id>http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp</id><content type="html" xml:base="http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp.html">&lt;p&gt;Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that, you would have to configure SMTP authentication for your website. Assuming you are using WordPress, there are many plugins available to complete this task.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpanel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rebuild_phpconf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Using the plugin and configuring sometimes won't help you to receive emails and would throw back errors related to authentication or connection timeout. So, I have posted the complete solution below from which you could successfully configure SMTP for your website.&lt;/p&gt;
 
-### Example:
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@home&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# /usr/local/cpanel/bin/rebuild_phpconf --available&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;Available&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;handlers: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;suphp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dso&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cgi&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;none&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;PHP4&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SAPI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;installed&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;PHP5&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SAPI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cgi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fcgi&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;SUEXEC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;RUID2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3&gt;Solution:&lt;/h3&gt;
 
-In the next tutorial, we will see how to change the PHP handler in cpanel server and will use a script to fix permissions for all the user accounts.
+&lt;h4&gt;Step 1:&lt;/h4&gt;
 
-Once this script is executed after changing the PHP handler you will never run into WordPress plugin or theme installation errors.</content><author><name>Vipin Kumar</name></author><summary type="html">A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp; FastCGI.</summary></entry><entry><title type="html">Download Videos From YouTube</title><link href="http://localhost:4000/scripting/2019/10/16/download-youtube-videos.html" rel="alternate" type="text/html" title="Download Videos From YouTube" /><published>2019-10-16T09:15:40+05:30</published><updated>2019-10-16T09:15:40+05:30</updated><id>http://localhost:4000/scripting/2019/10/16/download-youtube-videos</id><content type="html" xml:base="http://localhost:4000/scripting/2019/10/16/download-youtube-videos.html">I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs.
+&lt;p&gt;Login to your WordPress wp-admin control panel. Click on Plugins and then add-new button as shown in the below figure.&lt;/p&gt;
 
-First, let's get started with installing youtube-dl.
+&lt;p&gt;&lt;img src=&quot;/img/posts/plugins-addnew.png&quot; alt=&quot;Add new plugin&quot; style=&quot;width:600px;height:200px;&quot;&gt;&lt;/p&gt;
 
-# STEP 1: INSTALLING YOUTUBE-DL
+&lt;h4&gt;Step 2:&lt;/h4&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;No&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Nothing&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Search for the SMTP keyword. For demo purpose, I searched for wp SMTP and installed a plugin called &quot;Easy WP SMTP&quot; . While installing plugins make sure the plugin is updated regularly by its author and it has good reviews. &lt;/p&gt;
+&lt;p&gt;Click on the Install button and then Activate button to enable the plugin.&lt;/p&gt;
 
-If you get an error like above, use the below command.
+&lt;h4&gt;Step 3:&lt;/h4&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;downloads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;latest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;As shown in the figure below, go to plugins and click on the Settings link.&lt;/p&gt;
 
-After downloading the script, set the executable permission.
+&lt;p&gt;&lt;img src=&quot;/img/posts/pluginssettings.png&quot; alt=&quot;Add new plugin&quot; style=&quot;width:800px;height:100px;&quot;&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Next, you will see a settings page like below where you have to enter your SMTP details. I'll walk you through each one.&lt;/p&gt;
 
-Now, let's verify if the youtube-dl command works,
+&lt;p&gt;&lt;img src=&quot;/img/posts/smtppage.png&quot; alt=&quot;Add new plugin&quot; style=&quot;width:400px;height:400px;&quot;&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;ol&gt;
+    &lt;li&gt;&quot;From Email Address&quot;: Enter the email address from which the website send mail.&lt;/li&gt;
+    &lt;li&gt;&quot;From Name&quot;: Give a name you wish that should be shown when others receive emails from your website.&lt;/li&gt;
+    &lt;li&gt;&quot;SMTP Host&quot;: This is the SMTP server name that you use. For example, if you are using Gmail mail service, then your SMTP host will be &quot;smtp.gmail.com&quot;&lt;/li&gt;
+    &lt;li&gt;&quot;Type of Encryption&quot;: Select the TLS radio button.&lt;/li&gt;
+    &lt;li&gt;&quot;SMTP Port&quot;: If you select TLS encryption, then the port will be 587 and if you choose SSL then the port will be 465.&lt;/li&gt;
+    &lt;li&gt;&quot;SMTP AUTHENTICATION&quot;: Select &quot;yes&quot; radio button,&lt;/li&gt;
+    &lt;li&gt;&quot;SMTP Username&quot;: This would be the email id that you use to login to your mail account.&lt;/li&gt;
+    &lt;li&gt;&quot;SMTP Password&quot;: Enter your mail account password here.&lt;/li&gt;  
+&lt;/ol&gt; 
 
-If you get output from the above command, it's fine. Else, you have to copy/move the script file to /bin directory.
+&lt;p&gt;Now save all the changes by clicking the &quot;Save Changes&quot; button.&lt;/p&gt;
+&lt;p&gt;It's time to check if your details are correct and you are able to send mail via your SMTP details.&lt;/p&gt;
+&lt;p&gt;Under the Testing and debugging settings area, enter the details and click on send mail. You would probably encounter with some error like the below&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/bin/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;font color=&quot;red&quot;&gt;SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting or Some Authentication Issue&lt;/font&gt;
 
-Verify again if the &quot;youtube-dl -h&quot; command works and hope it would work as it did for me.
 
-# STEP 2: CREATE BASH SCRIPT
+&lt;p&gt;To avoid that, open your Gmail account and click or copy-paste this &lt;a href=&quot;https://www.google.com/settings/security/lesssecureapps&quot;&gt;link&lt;/a&gt; on another tab of your browser.&lt;/p&gt;
+&lt;p&gt;Select &quot;Turn on&quot; radio button to allow access and again try to send mail via testing and debugging settings. You would be able to send mail.&lt;/p&gt;
+&lt;p&gt;There are other methods without enabling access to less secure apps and I will post that in future articles.&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that, you would have to configure SMTP authentication for your website. Assuming you are using WordPress, there are many plugins available to complete this task.</summary></entry><entry><title type="html">Download Videos From YouTube</title><link href="http://localhost:4000/scripting/2019/10/16/download-youtube-videos.html" rel="alternate" type="text/html" title="Download Videos From YouTube" /><published>2019-10-16T09:15:40+05:30</published><updated>2019-10-16T09:15:40+05:30</updated><id>http://localhost:4000/scripting/2019/10/16/download-youtube-videos</id><content type="html" xml:base="http://localhost:4000/scripting/2019/10/16/download-youtube-videos.html">&lt;p&gt;I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs.
+&lt;/p&gt;
+&lt;p&gt;First, let's get started with installing youtube-dl.&lt;/p&gt;
 
-Now that we have installed the youtube-dl, let's create a bash script that will take input from a file.
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;videos&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dl&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$videos&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h4&gt;STEP 1: INSTALLING YOUTUBE-DL&lt;/h4&gt;
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    # yum install -y youtube-dl &lt;br&gt;
+    No package youtube-dl available&lt;br&gt;
+    Error: Nothing to do
+&lt;/div&gt;&lt;/p&gt;
 
-Save the script. I saved it as &quot;demo.sh&quot;.
+&lt;p&gt;If you get an error like above, use the below command.&lt;/p&gt;
 
-That's it. Our script is ready now, but we are not finished yet.
 
-# STEP 3: CREATE A FILE WITH VIDEO URLs
-The final step would be creating a simple file that contains video URLs. Make sure each video URL is in separate lines.
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt; # wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;After downloading the script, set the executable permission.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;video1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;video2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;video3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    # chmod a+x /usr/local/bin/youtube-dl
+&lt;/div&gt;&lt;/p&gt;
 
-Save the file with any name you want. For example, I saved the file as a video list.
+&lt;p&gt;Now, let's verify if the youtube-dl command works,&lt;/p&gt;
 
-# STEP 4: EXECUTE THE SCRIPT
-Finally, we are ready to download the list of videos in single command from youtube.
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    # youtube-dl -h
+&lt;/div&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;videolist&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;If you get output from the above command, it's fine. Else, you have to copy/move the script file to /bin directory.&lt;/p&gt;
 
-./demo -- This is our script
 
-videolist -- Our file containing list of videos
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    # cp /usr/local/bin/youtube-dl /bin/
+&lt;/div&gt;&lt;/p&gt;
 
-&lt; -- This is STDIN i.e we are giving the file as input for our script.
+&lt;p&gt;Verify again if the &quot;youtube-dl -h&quot; command works and hope it would work as it did for me.&lt;/p&gt;
 
-That's it.. :)</content><author><name>Vipin Kumar</name></author><summary type="html">I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs.</summary></entry></feed>
+&lt;h4&gt;STEP 2: CREATE BASH SCRIPT&lt;/h4&gt;
+
+&lt;p&gt;Now that we have installed the youtube-dl, let's create a bash script that will take input from a file.&lt;/p&gt;
+
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    #!/bin/bash &lt;br&gt;
+    while read videos &lt;br&gt;
+    do &lt;br&gt;
+        youtube-dl $videos &lt;br&gt;
+    done &lt;br&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Save the script. I saved it as &quot;demo.sh&quot;.&lt;/p&gt;
+&lt;p&gt;That's it. Our script is ready now, but we are not finished yet.&lt;/p&gt;
+
+&lt;h4&gt;STEP 3: CREATE A FILE WITH VIDEO URLs&lt;/h4&gt;
+&lt;p&gt;The final step would be creating a simple file that contains video URLs. Make sure each video URL is in separate lines.&lt;/p&gt;
+
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
+    video1 url &lt;br&gt;
+    video2 url &lt;br&gt;
+    video3 url &lt;br&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Save the file with any name you want. For example, I saved the file as a video list.&lt;/p&gt;
+
+&lt;h4&gt;STEP 4: EXECUTE THE SCRIPT&lt;/h4&gt;
+&lt;p&gt;Finally, we are ready to download the list of videos in single command from youtube.&lt;/p&gt;
+
+&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;# ./demo &lt; videolist&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;./demo -- This is our script&lt;/p&gt;
+&lt;p&gt;videolist -- Our file containing list of videos&lt;/p&gt;
+&lt;p&gt;&lt; -- This is STDIN i.e we are giving the file as input for our script.&lt;/p&gt;
+&lt;p&gt;That's it.. :)&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs. First, let's get started with installing youtube-dl.</summary></entry></feed>
