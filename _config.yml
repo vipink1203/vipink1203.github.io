@@ -1,0 +1,52 @@
+title:              VIPIN KUMAR
+email:              vipink1203@outlook.com
+description:        Just a personal site.
+author:             Vipin Kumar
+baseurl:            ""
+url:                "https://vipink1203.github.io/"
+
+# Social Profiles
+twitter_username:   vipink1203
+github_username:    vipink1203
+# facebook_username:  StartBootstrap
+linkedin_username:  vipink1203
+
+# # Add your google-analytics ID here to activate google analytics
+# google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+theme: jekyll-theme-clean-blog
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+
+
+# title: VIPIN KUMAR
+# email: vipink1203@outlook.com
+# description: >- # this means to ignore newlines until "baseurl:"
+#   Just a personal site.
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: vipink1203
+# github_username:  vipink1203
+
+# # Build settings
+# theme: jekyll-theme-clean-blog
+# plugins:
+#   - jekyll-feed
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
