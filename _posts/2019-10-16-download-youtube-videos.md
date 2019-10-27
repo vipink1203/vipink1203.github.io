@@ -83,6 +83,10 @@ Finally, we are ready to download the list of videos in single command from yout
 ```
 
 `./demo` -- This is our script
+
 `videolist` -- Our file containing list of videos
+
 `<` -- This is STDIN i.e we are giving the file as input for our script.
-That's it.. :smile:
+
+
+That's it..
