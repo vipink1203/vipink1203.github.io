@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-25T15:49:24+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">VIPIN KUMAR</title><subtitle>DevSecOps Engineer</subtitle><author><name>Vipin Kumar</name></author><entry><title type="html">Python Script to Decrypt Encrypted File With AWS KMS</title><link href="http://localhost:4000/scripting/2019/10/25/decrypt-kms-encrypted-file-using-python.html" rel="alternate" type="text/html" title="Python Script to Decrypt Encrypted File With AWS KMS" /><published>2019-10-25T01:33:40+05:30</published><updated>2019-10-25T01:33:40+05:30</updated><id>http://localhost:4000/scripting/2019/10/25/decrypt-kms-encrypted-file-using-python</id><content type="html" xml:base="http://localhost:4000/scripting/2019/10/25/decrypt-kms-encrypted-file-using-python.html">&lt;p&gt;In this post, you will learn how to encrypt an SSH private key using KMS and how to use Python to decrypt the encrypted SSH key. &lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-04T20:01:16+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">VIPIN KUMAR</title><subtitle>DevSecOps Engineer</subtitle><author><name>Vipin Kumar</name></author><entry><title type="html">Python Script to Decrypt Encrypted File With AWS KMS</title><link href="http://localhost:4000/scripting/2019/10/25/decrypt-kms-encrypted-file-using-python.html" rel="alternate" type="text/html" title="Python Script to Decrypt Encrypted File With AWS KMS" /><published>2019-10-25T01:33:40+05:30</published><updated>2019-10-25T01:33:40+05:30</updated><id>http://localhost:4000/scripting/2019/10/25/decrypt-kms-encrypted-file-using-python</id><content type="html" xml:base="http://localhost:4000/scripting/2019/10/25/decrypt-kms-encrypted-file-using-python.html">&lt;p&gt;In this post, you will learn how to encrypt an SSH private key using KMS and how to use Python to decrypt the encrypted SSH key. &lt;/p&gt;
 &lt;p&gt;This would be useful for the use cases such as when creating a Lambda function and you don't want to place the plain text SSH private key to do some operations on the server.&lt;/p&gt;
 
 &lt;p&gt;Let's begin..&lt;/p&gt;
@@ -60,33 +60,34 @@
 &lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
     # hostname &lt;br&gt;
     blog.vipinkumar.me
-&lt;/div&gt;&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">Once I faced an issue with changing RHEL 7 hostname running on AWS EC2 Instance. If I reboot or stop/start the instance, it will revert to using a hostname derived from the IP address assigned to the instance. In this post, you will find the solution to fix this issue if you encountered with one. So basically, the Linux hostname command can be used by administrators to change the hostname of a Linux instance. If you want the new hostname to persist between instance stops/starts and reboots, you must add the new hostname to /etc/hostname configuration file on your Linux instance.</summary></entry><entry><title type="html">List The Current PHP Handler - cPanel</title><link href="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html" rel="alternate" type="text/html" title="List The Current PHP Handler - cPanel" /><published>2019-10-16T10:55:40+05:30</published><updated>2019-10-16T10:55:40+05:30</updated><id>http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel</id><content type="html" xml:base="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html">&lt;p&gt;A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp; FastCGI.&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">Once I faced an issue with changing RHEL 7 hostname running on AWS EC2 Instance. If I reboot or stop/start the instance, it will revert to using a hostname derived from the IP address assigned to the instance. In this post, you will find the solution to fix this issue if you encountered with one. So basically, the Linux hostname command can be used by administrators to change the hostname of a Linux instance. If you want the new hostname to persist between instance stops/starts and reboots, you must add the new hostname to /etc/hostname configuration file on your Linux instance.</summary></entry><entry><title type="html">List The Current PHP Handler - cPanel</title><link href="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html" rel="alternate" type="text/html" title="List The Current PHP Handler - cPanel" /><published>2019-10-16T10:55:40+05:30</published><updated>2019-10-16T10:55:40+05:30</updated><id>http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel</id><content type="html" xml:base="http://localhost:4000/cpanel/2019/10/16/list-php-handler-cpanel.html">&lt;p&gt;A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp;amp; FastCGI.&lt;/p&gt;
+
 &lt;p&gt;In this tutorial, we will see how to list the current working PHP handler using command line.&lt;/p&gt;
+
 &lt;p&gt;First ssh into the server as the root user. Then run the command below,&lt;/p&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
-    root@home[~]# /usr/local/cpanel/bin/rebuild_phpconf --current &lt;br&gt;
-    Available handlers: suphp dso cgi none &lt;br&gt;
-    DEFAULT PHP: 5 &lt;br&gt;
-    PHP4 SAPI: none &lt;br&gt;
-    PHP5 SAPI: suphp &lt;br&gt;
-    SUEXEC: enabled &lt;br&gt;
-    RUID2: not installed &lt;br&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    root@home[~]# /usr/local/cpanel/bin/rebuild_phpconf &lt;span class=&quot;nt&quot;&gt;--current&lt;/span&gt; 
+    Available handlers: suphp dso cgi none 
+    DEFAULT PHP: 5
+    PHP4 SAPI: none
+    PHP5 SAPI: suphp
+    SUEXEC: enabled 
+    RUID2: not installed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;We can also list the available PHP handlers using the same command,&lt;/p&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
-    root@home [~]# /usr/local/cpanel/bin/rebuild_phpconf --available &lt;br&gt;
-    Available handlers: suphp dso cgi none &lt;br&gt;
-    PHP4 SAPI: not installed &lt;br&gt;
-    PHP5 SAPI: cgi-fcgi &lt;br&gt;
-    SUEXEC: available &lt;br&gt;
-    RUID2: not available &lt;br&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    root@home &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;~]# /usr/local/cpanel/bin/rebuild_phpconf &lt;span class=&quot;nt&quot;&gt;--available&lt;/span&gt;
+    Available handlers: suphp dso cgi none
+    PHP4 SAPI: not installed
+    PHP5 SAPI: cgi-fcgi
+    SUEXEC: available 
+    RUID2: not available
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;In the next tutorial, we will see how to change the PHP handler in cpanel server and will use a script to fix permissions for all the user accounts.&lt;/p&gt;
-&lt;p&gt;Once this script is executed after changing the PHP handler you will never run into WordPress plugin or theme installation errors.&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp; FastCGI. In this tutorial, we will see how to list the current working PHP handler using command line. First ssh into the server as the root user. Then run the command below,</summary></entry><entry><title type="html">Configure SMTP To Send Mails From A WordPress Website</title><link href="http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp.html" rel="alternate" type="text/html" title="Configure SMTP To Send Mails From A WordPress Website" /><published>2019-10-16T09:15:40+05:30</published><updated>2019-10-16T09:15:40+05:30</updated><id>http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp</id><content type="html" xml:base="http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp.html">&lt;p&gt;Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that, you would have to configure SMTP authentication for your website. Assuming you are using WordPress, there are many plugins available to complete this task.&lt;/p&gt;
+
+&lt;p&gt;Once this script is executed after changing the PHP handler you will never run into WordPress plugin or theme installation errors.&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, &amp;amp; FastCGI.</summary></entry><entry><title type="html">Configure SMTP To Send Mails From A WordPress Website</title><link href="http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp.html" rel="alternate" type="text/html" title="Configure SMTP To Send Mails From A WordPress Website" /><published>2019-10-16T09:15:40+05:30</published><updated>2019-10-16T09:15:40+05:30</updated><id>http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp</id><content type="html" xml:base="http://localhost:4000/wordpress/2019/10/16/configure-smtp-wp.html">&lt;p&gt;Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that, you would have to configure SMTP authentication for your website. Assuming you are using WordPress, there are many plugins available to complete this task.&lt;/p&gt;
 
 &lt;p&gt;Using the plugin and configuring sometimes won't help you to receive emails and would throw back errors related to authentication or connection timeout. So, I have posted the complete solution below from which you could successfully configure SMTP for your website.&lt;/p&gt;
 
@@ -133,76 +134,76 @@
 
 &lt;p&gt;To avoid that, open your Gmail account and click or copy-paste this &lt;a href=&quot;https://www.google.com/settings/security/lesssecureapps&quot;&gt;link&lt;/a&gt; on another tab of your browser.&lt;/p&gt;
 &lt;p&gt;Select &quot;Turn on&quot; radio button to allow access and again try to send mail via testing and debugging settings. You would be able to send mail.&lt;/p&gt;
-&lt;p&gt;There are other methods without enabling access to less secure apps and I will post that in future articles.&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that, you would have to configure SMTP authentication for your website. Assuming you are using WordPress, there are many plugins available to complete this task.</summary></entry><entry><title type="html">Download Videos From YouTube</title><link href="http://localhost:4000/scripting/2019/10/16/download-youtube-videos.html" rel="alternate" type="text/html" title="Download Videos From YouTube" /><published>2019-10-16T09:15:40+05:30</published><updated>2019-10-16T09:15:40+05:30</updated><id>http://localhost:4000/scripting/2019/10/16/download-youtube-videos</id><content type="html" xml:base="http://localhost:4000/scripting/2019/10/16/download-youtube-videos.html">&lt;p&gt;I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs.
-&lt;/p&gt;
-&lt;p&gt;First, let's get started with installing youtube-dl.&lt;/p&gt;
+&lt;p&gt;There are other methods without enabling access to less secure apps and I will post that in future articles.&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">Sending mails from a WordPress website sometimes receive in the spam folder. To avoid that, you would have to configure SMTP authentication for your website. Assuming you are using WordPress, there are many plugins available to complete this task.</summary></entry><entry><title type="html">Download Videos From YouTube</title><link href="http://localhost:4000/scripting/2019/10/16/download-youtube-videos.html" rel="alternate" type="text/html" title="Download Videos From YouTube" /><published>2019-10-16T09:15:40+05:30</published><updated>2019-10-16T09:15:40+05:30</updated><id>http://localhost:4000/scripting/2019/10/16/download-youtube-videos</id><content type="html" xml:base="http://localhost:4000/scripting/2019/10/16/download-youtube-videos.html">&lt;p&gt;I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs.&lt;/p&gt;
 
+&lt;p&gt;First, let’s get started with installing youtube-dl.&lt;/p&gt;
 
-&lt;h4&gt;STEP 1: INSTALLING YOUTUBE-DL&lt;/h4&gt;
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
-    # yum install -y youtube-dl &lt;br&gt;
-    No package youtube-dl available&lt;br&gt;
-    Error: Nothing to do
-&lt;/div&gt;&lt;/p&gt;
+&lt;h4 id=&quot;step-1-installing-youtube-dl&quot;&gt;STEP 1: INSTALLING YOUTUBE-DL&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;# yum install -y youtube-dl &lt;/span&gt;
+    No package youtube-dl available
+    Error: Nothing to &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you get an error like above, use the below command.&lt;/p&gt;
 
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;# wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt; # wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;After downloading the script, set the executable permission.&lt;/p&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
-    # chmod a+x /usr/local/bin/youtube-dl
-&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;# chmod a+x /usr/local/bin/youtube-dl&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Now, let's verify if the youtube-dl command works,&lt;/p&gt;
+&lt;p&gt;Now, let’s verify if the youtube-dl command works,&lt;/p&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
-    # youtube-dl -h
-&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;# youtube-dl -h&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;If you get output from the above command, it's fine. Else, you have to copy/move the script file to /bin directory.&lt;/p&gt;
+&lt;p&gt;If you get output from the above command, it’s fine. Else, you have to copy/move the script file to /bin directory.&lt;/p&gt;
 
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;# cp /usr/local/bin/youtube-dl /bin/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
-    # cp /usr/local/bin/youtube-dl /bin/
-&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Verify again if the &lt;code class=&quot;highlighter-rouge&quot;&gt;youtube-dl -h&lt;/code&gt; command works and hope it would work as it did for me.&lt;/p&gt;
 
-&lt;p&gt;Verify again if the &quot;youtube-dl -h&quot; command works and hope it would work as it did for me.&lt;/p&gt;
+&lt;h4 id=&quot;step-2-create-bash-script&quot;&gt;STEP 2: CREATE BASH SCRIPT&lt;/h4&gt;
 
-&lt;h4&gt;STEP 2: CREATE BASH SCRIPT&lt;/h4&gt;
+&lt;p&gt;Now that we have installed the youtube-dl, let’s create a bash script that will take input from a file.&lt;/p&gt;
 
-&lt;p&gt;Now that we have installed the youtube-dl, let's create a bash script that will take input from a file.&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;videos
+    &lt;span class=&quot;k&quot;&gt;do
+        &lt;/span&gt;youtube-dl &lt;span class=&quot;nv&quot;&gt;$videos&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
-    #!/bin/bash &lt;br&gt;
-    while read videos &lt;br&gt;
-    do &lt;br&gt;
-        youtube-dl $videos &lt;br&gt;
-    done &lt;br&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Save the script. I saved it as &lt;code class=&quot;highlighter-rouge&quot;&gt;demo.sh&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Save the script. I saved it as &quot;demo.sh&quot;.&lt;/p&gt;
-&lt;p&gt;That's it. Our script is ready now, but we are not finished yet.&lt;/p&gt;
+&lt;p&gt;That’s it. Our script is ready now, but we are not finished yet.&lt;/p&gt;
 
-&lt;h4&gt;STEP 3: CREATE A FILE WITH VIDEO URLs&lt;/h4&gt;
+&lt;h4 id=&quot;step-3-create-a-file-with-video-urls&quot;&gt;STEP 3: CREATE A FILE WITH VIDEO URLs&lt;/h4&gt;
+
 &lt;p&gt;The final step would be creating a simple file that contains video URLs. Make sure each video URL is in separate lines.&lt;/p&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;
-    video1 url &lt;br&gt;
-    video2 url &lt;br&gt;
-    video3 url &lt;br&gt;
-&lt;/div&gt;&lt;/p&gt;
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    video1 url &amp;lt;br&amp;gt;
+    video2 url &amp;lt;br&amp;gt;
+    video3 url &amp;lt;br&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Save the file with any name you want. For example, I saved the file as a video list.&lt;/p&gt;
 
-&lt;h4&gt;STEP 4: EXECUTE THE SCRIPT&lt;/h4&gt;
+&lt;h4 id=&quot;step-4-execute-the-script&quot;&gt;STEP 4: EXECUTE THE SCRIPT&lt;/h4&gt;
+
 &lt;p&gt;Finally, we are ready to download the list of videos in single command from youtube.&lt;/p&gt;
 
-&lt;p&gt;&lt;div style=&quot;background-color:black;color:white;padding:10px;&quot;&gt;# ./demo &lt; videolist&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;# ./demo &amp;lt; videolist&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;./demo -- This is our script&lt;/p&gt;
-&lt;p&gt;videolist -- Our file containing list of videos&lt;/p&gt;
-&lt;p&gt;&lt; -- This is STDIN i.e we are giving the file as input for our script.&lt;/p&gt;
-&lt;p&gt;That's it.. :)&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs. First, let's get started with installing youtube-dl.</summary></entry></feed>
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./demo&lt;/code&gt; – This is our script&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;videolist&lt;/code&gt; – Our file containing list of videos&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; – This is STDIN i.e we are giving the file as input for our script.&lt;/p&gt;
+
+&lt;p&gt;That’s it..&lt;/p&gt;</content><author><name>Vipin Kumar</name></author><summary type="html">I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs.</summary></entry></feed>

@@ -87,79 +87,80 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <p>I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs.
-</p>
-<p>First, let's get started with installing youtube-dl.</p>
+        <p>I was searching for an easy way to download YouTube videos from the Linux command line and I found youtube-dl command but I had to download each video individually. Now, I wanted something that could download a list of videos. For that, I came up with a bash script that could take a file as input containing the video URLs.</p>
 
+<p>First, let’s get started with installing youtube-dl.</p>
 
-<h4>STEP 1: INSTALLING YOUTUBE-DL</h4>
-<p><div style="background-color:black;color:white;padding:10px;">
-    # yum install -y youtube-dl <br>
-    No package youtube-dl available<br>
-    Error: Nothing to do
-</div></p>
+<h4 id="step-1-installing-youtube-dl">STEP 1: INSTALLING YOUTUBE-DL</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c"># yum install -y youtube-dl </span>
+    No package youtube-dl available
+    Error: Nothing to <span class="k">do</span>
+</code></pre></div></div>
 
 <p>If you get an error like above, use the below command.</p>
 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c"># wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl</span>
+</code></pre></div></div>
 
-<p><div style="background-color:black;color:white;padding:10px;"> # wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl</div></p>
 <p>After downloading the script, set the executable permission.</p>
 
-<p><div style="background-color:black;color:white;padding:10px;">
-    # chmod a+x /usr/local/bin/youtube-dl
-</div></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c"># chmod a+x /usr/local/bin/youtube-dl</span>
+</code></pre></div></div>
 
-<p>Now, let's verify if the youtube-dl command works,</p>
+<p>Now, let’s verify if the youtube-dl command works,</p>
 
-<p><div style="background-color:black;color:white;padding:10px;">
-    # youtube-dl -h
-</div></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c"># youtube-dl -h</span>
+</code></pre></div></div>
 
-<p>If you get output from the above command, it's fine. Else, you have to copy/move the script file to /bin directory.</p>
+<p>If you get output from the above command, it’s fine. Else, you have to copy/move the script file to /bin directory.</p>
 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c"># cp /usr/local/bin/youtube-dl /bin/</span>
+</code></pre></div></div>
 
-<p><div style="background-color:black;color:white;padding:10px;">
-    # cp /usr/local/bin/youtube-dl /bin/
-</div></p>
+<p>Verify again if the <code class="highlighter-rouge">youtube-dl -h</code> command works and hope it would work as it did for me.</p>
 
-<p>Verify again if the "youtube-dl -h" command works and hope it would work as it did for me.</p>
+<h4 id="step-2-create-bash-script">STEP 2: CREATE BASH SCRIPT</h4>
 
-<h4>STEP 2: CREATE BASH SCRIPT</h4>
+<p>Now that we have installed the youtube-dl, let’s create a bash script that will take input from a file.</p>
 
-<p>Now that we have installed the youtube-dl, let's create a bash script that will take input from a file.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c">#!/bin/bash</span>
+    <span class="k">while </span><span class="nb">read </span>videos
+    <span class="k">do
+        </span>youtube-dl <span class="nv">$videos</span> 
+    <span class="k">done</span>
+</code></pre></div></div>
 
-<p><div style="background-color:black;color:white;padding:10px;">
-    #!/bin/bash <br>
-    while read videos <br>
-    do <br>
-        youtube-dl $videos <br>
-    done <br>
-</div></p>
+<p>Save the script. I saved it as <code class="highlighter-rouge">demo.sh</code>.</p>
 
-<p>Save the script. I saved it as "demo.sh".</p>
-<p>That's it. Our script is ready now, but we are not finished yet.</p>
+<p>That’s it. Our script is ready now, but we are not finished yet.</p>
 
-<h4>STEP 3: CREATE A FILE WITH VIDEO URLs</h4>
+<h4 id="step-3-create-a-file-with-video-urls">STEP 3: CREATE A FILE WITH VIDEO URLs</h4>
+
 <p>The final step would be creating a simple file that contains video URLs. Make sure each video URL is in separate lines.</p>
 
-<p><div style="background-color:black;color:white;padding:10px;">
-    video1 url <br>
-    video2 url <br>
-    video3 url <br>
-</div></p>
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    video1 url &lt;br&gt;
+    video2 url &lt;br&gt;
+    video3 url &lt;br&gt;
+</code></pre></div></div>
 
 <p>Save the file with any name you want. For example, I saved the file as a video list.</p>
 
-<h4>STEP 4: EXECUTE THE SCRIPT</h4>
+<h4 id="step-4-execute-the-script">STEP 4: EXECUTE THE SCRIPT</h4>
+
 <p>Finally, we are ready to download the list of videos in single command from youtube.</p>
 
-<p><div style="background-color:black;color:white;padding:10px;"># ./demo < videolist</div></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c"># ./demo &lt; videolist</span>
+</code></pre></div></div>
 
-<p>./demo -- This is our script</p>
-<p>videolist -- Our file containing list of videos</p>
-<p>< -- This is STDIN i.e we are giving the file as input for our script.</p>
-<p>That's it.. :)</p>
+<p><code class="highlighter-rouge">./demo</code> – This is our script</p>
+
+<p><code class="highlighter-rouge">videolist</code> – Our file containing list of videos</p>
+
+<p><code class="highlighter-rouge">&lt;</code> – This is STDIN i.e we are giving the file as input for our script.</p>
+
+<p>That’s it..</p>
+
 
         <hr>
 
@@ -179,6 +180,30 @@
       </div>
     </div>
   </div>
+  <footer>
+    <div class="disqus">
+      <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vipinkumar-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </footer>
 
   <!-- Footer -->
 
