@@ -35,4 +35,4 @@ Place the EncryptedFile along with the python script and run it.
 
 I used Python 3.5 version, didn't test with Python 2. Feel free to do so.
 
-Will post another one where we will create a Lambda function to support this use case. :grinning:
+Will post another one where we will create a Lambda function to support this use case.
