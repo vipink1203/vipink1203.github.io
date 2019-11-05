@@ -8,7 +8,7 @@ categories: cPanel
 A PHP handler is a type of Apache module that contains libraries that the Apache webserver uses to interpret and run PHP code. Types of PHP handlers available in cPanel servers are CGI, DSO, suPHP, & FastCGI.
 
 
-In this tutorial, we will see how to list the current working PHP handler using command line.
+In this tutorial, you will learn how to list the current working PHP handler using command line.
 
 
 First ssh into the server as the root user. Then run the command below,
@@ -23,7 +23,7 @@ First ssh into the server as the root user. Then run the command below,
     RUID2: not installed
 ```
 
-We can also list the available PHP handlers using the same command,
+You can also list the available PHP handlers using the same command,
 
 ```shell
     root@home [~]# /usr/local/cpanel/bin/rebuild_phpconf --available
@@ -33,8 +33,5 @@ We can also list the available PHP handlers using the same command,
     SUEXEC: available 
     RUID2: not available
 ```
-
-
-In the next tutorial, we will see how to change the PHP handler in cpanel server and will use a script to fix permissions for all the user accounts.
 
 Once this script is executed after changing the PHP handler you will never run into WordPress plugin or theme installation errors.
