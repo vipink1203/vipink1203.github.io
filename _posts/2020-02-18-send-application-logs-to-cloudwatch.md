@@ -13,7 +13,7 @@ I recently had a requirement where developers wanted to see the application logs
 #### STEP 1: Create An EC2 Instance
 
 1. Create an EC2 instance and attach a role to it.
-2. Attach "CloudWatchAgentServerPolicy" managed policy to that role.
+2. Attach **CloudWatchAgentServerPolicy** managed policy to that role.
 3. Login to the instance.
 4. Find the right agent link for your OS by visiting the [link](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html)
 
