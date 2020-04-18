@@ -64,9 +64,6 @@ AWS SSM Parameter store comes to rescue. As said earlier you can store or arrang
 /prod/App2/DB_NAME
 ```
 
-The format is simple - /{ENV}/{APP-NAME}/{PARAMETER}. But of course you can store any way you like. Having a proper nomenclature for naming each parameter would be easy when you have hundreds or thousands of parameters.
+The format is simple - /{ENV}/{APP-NAME}/{PARAMETER}. But of course you can store any way you like. Having a proper nomenclature for naming each parameter path would be easy to handle when you have hundreds or thousands of parameters.
 
 In the part-2, we will see how we can add a new parameter and it's value using AWS CLI.
-
-
-
