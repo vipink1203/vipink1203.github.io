@@ -107,3 +107,14 @@ here is the response for the above command
 ```
 
 Notice some change in the command from the previous one? "--with-decryption" option in the command while querying the parameter refers that the KMS key you used to encrypt the value you want the same key to decrypt and send it back in the response.
+
+Now if you want just the value of that parameter and ignore all the json format, use the below command
+
+```
+aws ssm get-parameter --name /dev/App1/DB_HOST --region us-east-1| jq -r ".Parameter.Value")
+```
+
+**Output:**
+```
+dev-example-db-host.com
+```
