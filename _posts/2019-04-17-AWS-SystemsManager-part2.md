@@ -34,7 +34,7 @@ If you use a secure string, you will have to select a KMS key which should have 
 
 **Value** is where you will write your database hostname in this case since we are talking about the **DB_HOST** key.
 
-<img src="/img/posts/parameterstore/parameterstore4.png" alt="Tags" style="width:100vh;"/>
+<img src="/img/posts/parameterstore/parameterstore3.png" alt="Tags" style="width:100vh;"/>
 
 **Tags** - This is optional but it is always a best practice to add tags to all your resources.
 
