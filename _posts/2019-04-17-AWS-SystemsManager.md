@@ -20,15 +20,15 @@ Parameter Store is a service which helps you arrange your data in a systematic h
 
 Before we dive into CLI commands, I would recommend to go to the Systems Manager service in AWS portal and checkout parameter store. You will get a clear idea on how it works.
 
-### Data Hierarchy
-
 So let me start with an example/senario. Your boss calls you one day and he wants you to remove all the Database credentials from the Github repositories. You might say, all our repositories are private and no one can see except the organisation members and contributors. Good point, huh?
 
 No, it seems like a good point to make but it's not a good practice to keep the senstive information in the repositories in plain text. Why does other teams in the organisation have to know other application credentials?
 
+### Data Hierarchy
+
 AWS SSM Parameter store comes to rescue. As said earlier you can store or arrange your data in a systematic hierarchical format for better reference. Imagine you have 2 applications App1 and App2, both have DB credentials you want to store to parameter store. Now what's the best way?
 
-#### App1 Hierarchy
+##### App1 Hierarchy
 ```
 /dev/App1/DB_HOST
 /dev/App1/DB_USER
@@ -46,7 +46,7 @@ AWS SSM Parameter store comes to rescue. As said earlier you can store or arrang
 /prod/App1/DB_NAME
 ```
 
-#### App2 Hierarchy
+##### App2 Hierarchy
 ```
 /dev/App2/DB_HOST
 /dev/App2/DB_USER
