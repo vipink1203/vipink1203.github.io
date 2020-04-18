@@ -15,9 +15,9 @@ This part does not cover aws cli configuration. Please refer this [link](https:/
 
 _**Create a parameter**_
 
-```console
+{% highlight bash %}
 $ aws ssm put-parameter --name /dev/App1/DB_HOST --value dev-example-db-host.com --type String
-```
+{% endhighlight %}
 
 **name** is your parameter path.
 
