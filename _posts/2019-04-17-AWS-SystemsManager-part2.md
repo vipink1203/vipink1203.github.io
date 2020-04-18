@@ -13,7 +13,7 @@ First let's understand all the details within the parameter store, in that way i
 
 ###### Name, Description and Tier
 
-![Name](/img/posts/parameterstore/parameterstore1.png)
+![Name](/img/posts/parameterstore/parameterstore1.png =250x)
 
 **Name** is where you enter your path. Remember in the previous post we saw the App hierarchy? Something like this -
 
