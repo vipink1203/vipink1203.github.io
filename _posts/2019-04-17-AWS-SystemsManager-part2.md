@@ -11,6 +11,8 @@ First let's understand all the details within the parameter store, in that way i
 
 ### Parameter Store Details
 
+
+
 ###### Name, Description and Tier
 
 <img src="/img/posts/parameterstore/parameterstore1.png" alt="Name" style="width:100vh;"/>
@@ -25,6 +27,12 @@ So this is your parameter path and for the DB_HOST in this path is your key to w
 
 **Description** is where you enter a proper comment to identify what this parameter is used for.
 
+
+
+
+###### Tier, Type, Value
+
+
 **Tier** is something you want to choose carefully. It is nothing but the limit set as how many parameters you can use. The description is already self explanatory, but remember if you go for advanced option later you cannot change it back to standard the option.
 
 <img src="/img/posts/parameterstore/parameterstore2.png" alt="Type" style="width:100vh;"/>
@@ -35,6 +43,9 @@ If you use a secure string, you will have to select a KMS key which should have 
 **Value** is where you will write your database hostname in this case since we are talking about the **DB_HOST** key.
 
 <img src="/img/posts/parameterstore/parameterstore3.png" alt="Tags" style="width:100vh;"/>
+
+
+###### Tags
 
 **Tags** - This is optional but it is always a best practice to add tags to all your resources.
 
