@@ -66,7 +66,7 @@ _**Querying parameters**_
 We can query the parameters. We're going to use jq to filter the response.
 
 ```
-$ aws ssm get-parameters-by-path --recursive --path /dev/App1/| jq '.Parameters | map({Name,Value,Version})'
+$ aws ssm get-parameters-by-path --recursive --path /dev/App1/ | jq '.Parameters | map({Name,Value,Version})'
 ```
 
 response:
@@ -84,3 +84,26 @@ response:
   }
 ]
 ```
+
+Let's look at another command,
+
+```
+aws ssm get-parameter-history --name /dev/App1/DB_PASS --with-decryption | jq '.Parameters | map({Value,Version})'
+```
+
+here is the response for the above command
+
+```
+[
+  {
+    "Value": "p@ssw0rd",
+    "Version": 1
+  },
+  {
+    "Value": "p@ssw0rd2",
+    "Version": 2
+  }
+]
+```
+
+Notice some change in the command from the previous one? "--with-decryption" option in the command while querying the parameter refers that the KMS key you used to encrypt the value you want the same key to decrypt and send it back in the response.
