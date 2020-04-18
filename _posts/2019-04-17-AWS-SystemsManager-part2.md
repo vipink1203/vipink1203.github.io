@@ -48,4 +48,4 @@ _**Tags**_
 
 **Tags** - This is optional but it is always a best practice to add tags to all your resources.
 
-That's all... Now let's cover the CLI part - [PART-3]()
+That's all... Now let's cover the CLI part - [PART-3](https://www.vipinkumar.me/aws/2020/04/16/AWS-SystemsManager-part3.html)
