@@ -19,9 +19,11 @@ _**Create a parameter**_
 $ aws ssm put-parameter --name /dev/App1/DB_HOST --value dev-example-db-host.com --type String
 ```
 
-**--name** is your parameter path
-**--value** is your hostname which is the secret value you want to avoid checking into Github
-**--type** is the type of value you are storing in this parameter. In this case it is a simple string.
+**name** is your parameter path.
+
+**value** is your hostname which is the secret value you want to avoid checking into Github.
+
+**type** is the type of value you are storing in this parameter. In this case it is a simple string.
 
 If you want to store a password which has to be secure and should not be stored as plain text. The command would be like,
 
