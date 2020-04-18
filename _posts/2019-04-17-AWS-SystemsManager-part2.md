@@ -12,7 +12,7 @@ First let's understand all the details within the parameter store, in that way i
 ### Parameter Store Details
 
 
-__**Name, Description and Tier**__
+_**Name, Description and Tier**_
 
 <img src="/img/posts/parameterstore/parameterstore1.png" alt="Name" style="width:100vh;"/>
 
@@ -29,7 +29,7 @@ So this is your parameter path and for the DB_HOST in this path is your key to w
 
 
 
-__**Tier, Type, Value**__
+_**Tier, Type, Value**_
 
 
 **Tier** is something you want to choose carefully. It is nothing but the limit set as how many parameters you can use. The description is already self explanatory, but remember if you go for advanced option later you cannot change it back to standard the option.
@@ -44,7 +44,7 @@ If you use a secure string, you will have to select a KMS key which should have 
 <img src="/img/posts/parameterstore/parameterstore3.png" alt="Tags" style="width:100vh;"/>
 
 
-__**Tags**__
+_**Tags**_
 
 **Tags** - This is optional but it is always a best practice to add tags to all your resources.
 
