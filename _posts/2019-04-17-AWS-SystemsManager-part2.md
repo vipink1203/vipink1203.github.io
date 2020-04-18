@@ -13,7 +13,7 @@ First let's understand all the details within the parameter store, in that way i
 
 ###### Name, Description and Tier
 
-![Name](/img/posts/parameterstore/parameterstore1.png =250x)
+![Name](/img/posts/parameterstore/parameterstore1.png =100x20)
 
 **Name** is where you enter your path. Remember in the previous post we saw the App hierarchy? Something like this -
 
@@ -27,14 +27,14 @@ So this is your parameter path and for the DB_HOST in this path is your key to w
 
 **Tier** is something you want to choose carefully. It is nothing but the limit set as how many parameters you can use. The description is already self explanatory, but remember if you go for advanced option later you cannot change it back to standard the option.
 
-![Type](/img/posts/parameterstore/parameterstore2.png)
+![Type](/img/posts/parameterstore/parameterstore2.png =100x20)
 
 **Type** is nothing but what type of value are you storing for this key. It can be a string, stringList or a secure string.
 If you use a secure string, you will have to select a KMS key which should have proper policy attached to encrypt and decrypt the value of your key.
 
 **Value** is where you will write your database hostname in this case since we are talking about the **DB_HOST** key.
 
-![Tags](/img/posts/parameterstore/parameterstore3.png)
+![Tags](/img/posts/parameterstore/parameterstore3.png =100x20)
 
 **Tags** - This is optional but it is always a best practice to add tags to all your resources.
 
