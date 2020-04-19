@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Send Application Logs to AWS CloudWatch"
+title:  "Send Linux logs to AWS Cloudwatch"
 date:   2020-02-18 10:15:40 +0530
 categories: AWS
 ---
