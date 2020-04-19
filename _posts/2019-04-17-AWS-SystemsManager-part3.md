@@ -118,3 +118,15 @@ aws ssm get-parameter --name /dev/App1/DB_HOST --region us-east-1| jq -r ".Param
 ```
 dev-example-db-host.com
 ```
+
+
+**Final command to add a parameter with all details**
+```
+aws --region us-east-1 ssm put-parameter --name /dev/App1/DB_HOST \
+--value dev-example-db-host.com \
+--type String \
+--tags '[{"Key":"env","Value":"dev"},{"Key":"group","Value":"vip"}]' \
+--description "Airflow Github OAuth Client Secret"
+```
+
+Our ultiamate goal now is to add all these parameter values to our configuration file. Check out [part-4]().
