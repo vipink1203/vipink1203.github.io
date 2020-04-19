@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Python Script to Decrypt Encrypted File With AWS KMS"
+description: "Python Script to Decrypt a File With AWS KMS"
 date:   2019-10-25 1:33:40 +0530
 categories: scripting
 ---

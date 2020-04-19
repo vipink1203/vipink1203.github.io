@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Parameter Store - AWS Systems Manager Part-2"
+description: "AWS SSM - Parameter store details"
 date:   2020-04-17 2:15:12 +0530
 categories: AWS
 ---

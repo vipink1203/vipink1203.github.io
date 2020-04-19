@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Databricks-JupyterLab Integration"
+description: "Integrate JupyterLab with Databricks"
 date:   2020-02-19 7:11:40 +0530
 categories: Databricks
 ---

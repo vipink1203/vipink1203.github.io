@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "List The Current PHP Handler - cPanel"
+description: "cPanel list PHP handlers"
 date:   2019-10-16 10:55:40 +0530
 categories: cPanel
 ---
