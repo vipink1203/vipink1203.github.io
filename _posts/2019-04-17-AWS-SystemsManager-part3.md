@@ -125,8 +125,8 @@ dev-example-db-host.com
 aws --region us-east-1 ssm put-parameter --name /dev/App1/DB_HOST \
 --value dev-example-db-host.com \
 --type String \
---tags '[{"Key":"env","Value":"dev"},{"Key":"group","Value":"vip"}]' \
---description "Airflow Github OAuth Client Secret"
+--tags '[{"Key":"env","Value":"dev"},{"Key":"group","Value":"teamName"}]' \
+--description "App1 Database hostname"
 ```
 
 Our ultiamate goal now is to add all these parameter values to our configuration file. Check out [part-4]().
