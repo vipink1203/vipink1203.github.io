@@ -24,7 +24,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
   - jekyll-seo-tag
-
+  - jekyll-sitemap
 # title: VIPIN KUMAR
 # email: vipink1203@outlook.com
 # description: >- # this means to ignore newlines until "baseurl:"
